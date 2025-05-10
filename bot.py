@@ -1,4 +1,5 @@
 import logging
+import os
 from telegram import Update, ReplyKeyboardMarkup, KeyboardButton
 from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes, MessageHandler, filters, ConversationHandler
 
@@ -7,7 +8,8 @@ logging.basicConfig(
     level=logging.INFO
 )
 
-TOKEN = '8180023065:AAE0IIRmyPD88XIIOp9xpjr7RFbYxcsENXc'
+# Токен теперь берётся из переменной окружения
+TOKEN = os.environ.get("BOT_TOKEN")
 
 # Состояния для ConversationHandler
 LANGUAGE, CONSUMER_TYPE, NEW_CHOICE = range(3)
