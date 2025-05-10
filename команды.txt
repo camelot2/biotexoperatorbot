@@ -1,0 +1,8 @@
+pip install python-telegram-bot --upgrade - Установи библиотеку
+
+- перейти в папку
+cd /d D:\biotexopeatorbot
+
+- запуск файла
+python bot.py
+
