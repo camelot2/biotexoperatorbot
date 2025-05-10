@@ -49,7 +49,7 @@ async def handle_language_choice(update: Update, context: ContextTypes.DEFAULT_T
 async def handle_consumer_type(update: Update, context: ContextTypes.DEFAULT_TYPE):
     text = update.message.text
 
-    if text == "🇺🇿 Аҳоли" or text == "Физический потребитель":
+    if text == "Аҳоли" or text == "Физический потребитель":
         keyboard = [
             [KeyboardButton("Тулов микдори"), KeyboardButton("Офис манзили")],
             [KeyboardButton("Хисоб ракамимни биламан"), KeyboardButton("Савол ва мурожаат колдириш")]
@@ -79,7 +79,7 @@ async def handle_new_choice(update: Update, context: ContextTypes.DEFAULT_TYPE):
     elif text == "Хисоб ракамимни биламан" or text == "Я знаю свой лицевой счет":
         await update.message.reply_text("Введите свой лицевой счёт для дальнейшего поиска.")
 
-    elif text == "Савол ва мурожаат колдириш" or text == "Оставить вопросов и обращений":
+    elif text == "Савол ва мурожаат колдириш" or text == "Оставить вопросы и обращения":
         await update.message.reply_text("Оставьте свой вопрос или обращение, и мы с вами свяжемся.")
 
     else:
